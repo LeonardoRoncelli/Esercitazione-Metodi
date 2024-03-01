@@ -1,17 +1,20 @@
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        mostraMessaggio();
-        mostraMessaggio2();
-        mostraMessaggio3();
+        Scanner input=new Scanner (System.in);
+        double base;
+        double altezza;
+        double perimetro;
+        System.out.println("Inserisci l'altezza");
+        altezza= input.nextDouble();
+        System.out.println("Inserisci la base");
+        base= input.nextDouble();
+        perimetro=perimetroRettangolo(base,altezza);
+        System.out.println("Il perimetro è: "+perimetro);
     }
-    private static void mostraMessaggio(){
-        System.out.println("Ciao");
-    }
-    private static void mostraMessaggio2(){
-        System.out.println("Oggi piove");
-    }
-    private static void mostraMessaggio3(){
-        System.out.println("Oggi è giovedì");
+    private static double perimetroRettangolo (double h, double b){
+        double p;
+        p=(b*2)+(h*2);
+        return p;
     }
 }
